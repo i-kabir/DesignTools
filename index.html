@@ -1,0 +1,522 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+  <meta http-equiv="x-ua-compatible" content="ie=edge" />
+  <title>Kabir's Design Tools</title>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@100;200;300;400;500;600;700&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,400;1,700&display=swap"
+    rel="stylesheet" />
+  <link rel="stylesheet" href="css/bootstrap.min.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/select2/4.0.13/css/select2.min.css"
+    integrity="sha512-nMNlpuaDPrqlEls3IX/Q56H36qvBASwb3ipuo3MxeWbsQB1881ox0cRv7UPTgBlriqoynt35KjEwgGUeUXIPnw=="
+    crossorigin="anonymous" />
+  <link rel="stylesheet" href="css/handsontable.full.min.css" />
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+
+<body>
+  <nav class="navbar navbar-dark fixed-top"> <a href="#" class="navbar-brand mx-auto"> <img src="img/logo.png" alt="">
+    </a></nav>
+  <div class="video-background">
+    <div class="video-wrap">
+      <div id="video"> <video id="bgvid" src="video/home.mp4" autoplay loop muted playsinline></video></div>
+    </div>
+  </div>
+  <div class="caption">
+    <h1>Kabir's Design Tools</h1>
+    <h3>A collection of civil engineering online tools</h3>
+    <div class="moving-mouse-holder">
+      <div class="mouse">
+        <div class="mouse-button">&nbsp;</div>
+      </div>
+      <div class="text">SCROLL DOWN <br> TO EXPLORE MORE</div>
+    </div>
+  </div> <br>
+  <div class="container-fluid">
+    <div id="title_rs" class="row justify-content-center mb-2">
+      <div class="card col-md-8 shadow-lg p-3 mb-5 bg-white rounded">
+        <div class="card-body text-center">
+          <h4>Response Spectrum Parameter for Seismic Design</h4>
+          <h5 class="text-muted">Bangladesh National Building Code 2017</h5>
+        </div>
+      </div>
+    </div>
+    <div id="rsPage1" class="row justify-content-center">
+      <div class="col-md-8">
+        <div class="card">
+          <form id="form11" action="">
+            <div class="card-header">
+              <h5>Input Parameter</h5>
+            </div>
+            <div class="row no-gutters">
+              <div class="col-md-4">
+                <div class="d-none d-md-block"> <img class="img-fluid rounded m-2" src="img/sis01.jpg" alt="">
+                  <p class="small text-center p-1">Figure: A replica of an ancient Chinese Seismograph from Eastern Han
+                    Dynasty (25-220 CE). <br><i>Source: Wikimedia Commons</i></p>
+                </div>
+              </div>
+              <div class="col-md-8">
+                <div class="card-body">
+                  <div>Structure Location:</div>
+                  <div class="custom-control custom-radio custom-control-inline"> <input type="radio" id="r1"
+                      name="radioLocation" class="custom-control-input" value="byTown" /> <label
+                      class="custom-control-label" for="r1">Town/District</label></div>
+                  <div class="custom-control custom-radio custom-control-inline"> <input required type="radio" id="r2"
+                      name="radioLocation" class="custom-control-input" value="byZone" /> <label
+                      class="custom-control-label" for="r2">Seismic Zone</label></div>
+                  <div class="mb-3"> <select required class="custom-select" id="townOrZone"></select></div> <label
+                    for="OC">Occupancy Category of Structures:</label>
+                  <div class="d-flex mb-3">
+                    <div class="flex-grow-1"> <select required class="custom-select" id="OC">
+                        <option value="1">Catagory-I</option>
+                        <option value="1">Catagory-II</option>
+                        <option value="1.25">Catagory-III</option>
+                        <option value="1.5">Catagory-IV</option>
+                      </select></div> <button class="btn btn-info ml-1" type="button" data-toggle="modal"
+                      data-target="#myModal1"> <i class="fas fa-info"></i> </button>
+                  </div> <label for="OC">Site class of Structures:</label>
+                  <div class="d-flex mb-3">
+                    <div class="flex-grow-1"> <select required class="custom-select" id="S">
+                        <option value="1">SA</option>
+                        <option value="1.2">SB</option>
+                        <option value="1.15">SC</option>
+                        <option value="1.35">SD</option>
+                        <option value="1.4">SE</option>
+                      </select></div> <button class="btn btn-info ml-1" type="button" data-toggle="modal"
+                      data-target="#myModal2"> <i class="fas fa-info"></i> </button>
+                  </div><label for="R">Seismic Force Resisting System:</label>
+                  <div class="mb-3"> <select required class="custom-select selectpicker" id="R">
+                      <optgroup label="BEARING WALL SYSTEMS (no frame)">
+                        <option value="5">Special reinforced concrete shear walls</option>
+                        <option value="4">Ordinary reinforced concrete shear walls</option>
+                        <option value="2">Ordinary reinforced masonry shear walls</option>
+                        <option value="1.5">Ordinary plain masonry shear walls</option>
+                      </optgroup>
+                      <optgroup label="BUILDING FRAME SYSTEMS (with bracing for shear wall)">
+                        <option value="8">Steel eccentrically braced frames, moment resisting connections at columns
+                          away from links</option>
+                        <option value="7">Steel eccentrically braced frames, nonmoment- resisting, connections at
+                          columns away from links</option>
+                        <option value="6">Special steel concentrically braced frames</option>
+                        <option value="3.25">Ordinary steel concentrically braced frames</option>
+                        <option value="6">Special reinforced concrete shear walls</option>
+                        <option value="5">Ordinary reinforced concrete shear walls</option>
+                        <option value="2">Ordinary reinforced masonry shear walls</option>
+                        <option value="1.5">Ordinary plain masonry shear walls</option>
+                      </optgroup>
+                      <optgroup label="MOMENT RESISTING FRAME SYSTEMS (no shear wall)">
+                        <option value="8">Special steel moment frames</option>
+                        <option value="4.5">Intermediate steel moment frames</option>
+                        <option value="3.5">Ordinary steel moment frames</option>
+                        <option value="8">Special reinforced concrete moment frames</option>
+                        <option value="5">Intermediate reinforced concrete moment frames</option>
+                        <option value="3">Ordinary reinforced concrete moment frames</option>
+                      </optgroup>
+                      <optgroup
+                        label="DUAL SYSTEMS: SPECIAL MOMENT FRAMES CAPABLE OF RESISTING AT LEAST 25% OF PRESCRIBED SEISMIC FORCES (with bracing or shear wall)">
+                        <option value="8">Steel eccentrically braced frames</option>
+                        <option value="7">Special steel concentrically braced frames</option>
+                        <option value="7">Special reinforced concrete shear walls</option>
+                        <option value="6">Ordinary reinforced concrete shear walls</option>
+                      </optgroup>
+                      <optgroup
+                        label="DUAL SYSTEMS: INTERMEDIATE MOMENT FRAMES CAPABLE OF RESISTING AT LEAST 25% OF PRESCRIBED SEISMIC FORCES (with bracing or shear wall)">
+                        <option value="6">Special steel concentrically braced frames</option>
+                        <option value="6.5">Special reinforced concrete shear walls</option>
+                        <option value="3">Ordinary reinforced masonry shear walls</option>
+                        <option value="3.5">Ordinary reinforced concrete shear walls</option>
+                      </optgroup>
+                      <optgroup
+                        label="DUAL SHEAR WALL-FRAME SYSTEM: ORDINARY REINFORCED CONCRETE MOMENT FRAMES AND ORDINARY REINFORCED CONCRETE SHEAR WALLS">
+                        <option value="4.5">Dual shear wall-frame system: ordinary reinforced concrete moment frames and
+                          ordinary reinforced concrete shear walls</option>
+                      </optgroup>
+                      <optgroup label="STEEL SYSTEMS NOT SPECIFICALLY DETAILED FOR SEISMIC RESISTANCE">
+                        <option value="3">Steel systems not specifically detailed for seismic resistance</option>
+                      </optgroup>
+                    </select></div> <label>Viscous damping ratio of the structure:</label>
+                  <div class="input-group mb-3"> <input required type="number" class="form-control text-right"
+                      aria-label="Recipient's username" aria-describedby="basic-addon2" id="dampingRatio" min="1"
+                      max="20" step="any" value="5" />
+                    <div class="input-group-append"> <span class="input-group-text">%</span></div>
+                  </div><label for="">Approximate fundamental period:</label>
+                  <div class="input-group mb-3">
+                    <div class="input-group-prepend"> <button class="btn btn-outline-primary" type="button"
+                        data-toggle="modal" data-target="#myModal3" min="0.0001" max="10" step="any">Calculate <i
+                          class="fas fa-calculator"></i> </button></div> <input id="aPeriod" required type="number"
+                      class="form-control text-right" step="any" />
+                    <div class="input-group-append"> <span class="input-group-text">Second</span></div>
+                  </div><label for="">Fundamental period for calculation:</label>
+                  <div class="input-group"> <input id="fPeriod" required type="number" class="form-control text-right"
+                      min="0.0001" max="10" step="any" />
+                    <div class="input-group-append"> <span class="input-group-text">Second</span></div>
+                  </div>
+                  <div id="alertT1" class="alert alert-warning text-center mt-2"> <i
+                      class="fa fa-exclamation-circle"></i> <small> This period shall not exceed the approximate
+                      fundamental period determined by Eq. 6.2.38 by more than 40 percent.</small></div>
+                  <div id="alertT2" class="alert alert-warning text-center mt-2"> <i
+                      class="fa fa-exclamation-circle"></i> <small> This period value excceds the maximum limit
+                      stipulated by Eq. 6.2.35</small></div>
+                </div>
+              </div>
+            </div>
+            <div class="card-footer">
+              <div class="d-flex justify-content-between"> <button id="rsPg1Reset" type="reset"
+                  class="btn btn btn-dark"><i class="fa fa-refresh"></i> Reset</button> <button type="submit"
+                  class="btn btn-primary">Next <i class="fa fa-chevron-right"></i></button></div>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+    <div id="rsPage2" class="row justify-content-center">
+      <div class="col-md-8">
+        <div class="card">
+          <div class="card-header">
+            <h5>Seismic Parameters</h5>
+          </div>
+          <div class="card-body">
+            <p> Structure location : <strong id="outLocationValue"></strong><br /> Seismic zone coefficient, Z = <strong
+                id="outZ"></strong><small class="text-muted">[Part 6, Ch 2, Table 6.2.14,6.2.15]</small><br /> Occupancy
+              category : <strong id="outOC"></strong><br /> Structural importance factor, I = <strong
+                id="outI"></strong> <small class="text-muted">[Part 6, Ch 2, Table 6.2.17]</small><br /> Site class :
+              <strong id="outSiteClass"></strong><br /> Soil factor, S = <strong id="outS"></strong><small
+                class="text-muted">[Part 6, Ch 2, Table 6.2.16]</small><br /> Seismic design category = <strong
+                id="outCDC"></strong><small class="text-muted">[Part 6, Ch 2, Table 6.2.18]</small><br /> Seismic force
+              resisting system : <strong id="outSFRS"></strong><br /> Response reduction factor, R = <strong
+                id="outR"></strong><small class="text-muted">[Part 6, Ch 2, Table 6.2.19]</small><br /> Viscous damping
+              ratio, &xi; = <strong id="outDampingRatio"></strong> %<br /> Damping correction factor, &eta; = <strong
+                id="outEta"></strong><small class="text-muted">[Part 6, Ch 2, Equation 6.2.36]</small><br /> Fundamental
+              period for calculation, T = <strong id="outT"></strong> second<br /> Lower limit of the period of the
+              constant spectral accleration branch, T<sub>b</sub> = <strong id="outTb"></strong> second<small
+                class="text-muted">[Part 6, Ch 2, Table 6.2.16]</small><br /> Upper limit of the period of the constant
+              spectral accleration branch, T<sub>c</sub> = <strong id="outTc"></strong> second<small
+                class="text-muted">[Part 6, Ch 2, Table 6.2.16]</small><br /> Lower limit of the period of the constant
+              spectral displacement branch, T<sub>d</sub> = <strong id="outTd"></strong> second<small
+                class="text-muted">[Part 6, Ch 2, Table 6.2.16]</small><br> Normalized acceleration response spectrum of
+              Structure, C<sub>s</sub> = <strong id="outCs"></strong> <small class="text-muted">[Part 6, Ch 2, Equation
+                6.2.35]</small><br /> Design spectral acceleration for elastic analysis, S<sub>a(elastic)</sub> =
+              <strong id="outSaE"></strong> in g unit <small class="text-muted">[Part 6, Ch 2, Equation 6.2.34, Article
+                2.5.4.3]</small><br /> Design spectral acceleration for inelastic analysis, S<sub>a(inelastic)</sub> =
+              <strong id="outSaI"></strong> in g unit <small class="text-muted">[Part 6, Ch 2, Article
+                2.5.4.3]</small><br /></p>
+          </div>
+          <div class="card-footer">
+            <div class="d-flex justify-content-between"> <button id="rsPg2Previous" type="button"
+                class="btn btn-primary"><i class="fa fa-chevron-left"></i> Previous</button> <button id="rsPg2Next"
+                type="button" class="btn btn-primary">Next <i class="fa fa-chevron-right"></i></button></div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div id="rsPage3" class="row justify-content-center">
+      <div class="col-md-8">
+        <div class="card">
+          <div class="card-header">
+            <h5>Chart & Table</h5>
+          </div>
+          <div class="card-body">
+            <div class="d-flex justify-content-center">
+              <div class="btn-group btn-group-toggle" data-toggle="buttons"> <label class="btn btn-primary"> <input
+                    type="radio" name="radioPlotingType" id="r21" value="0">Normalized</label> <label
+                  class="btn btn-primary"> <input type="radio" name="radioPlotingType" id="r22" value="1">Elastic
+                  Design</label> <label class="btn btn-primary"> <input type="radio" name="radioPlotingType" id="r23"
+                    value="2"> Inelastic Design</label></div>
+            </div>
+            <div class="d-flex align-items-md-stretch">
+              <div class="col-8">
+                <h5>Chart</h5>
+                <div id="chart1"></div>
+              </div>
+              <div class="col-4">
+                <h5>Table</h5>
+                <div class="hot" id="hottable1"></div>
+              </div>
+            </div>
+          </div>
+          <div class="card-footer">
+            <div class="d-flex justify-content-between"> <button id="rsPg3Previous" type="button"
+                class="btn btn-primary"><i class="fa fa-chevron-left"></i> Previous</button> <button id="rsPg3Next"
+                type="button" class="btn btn-primary">First <i class="fa fa-level-up"></i></button></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div> <br>
+  <script type="text/javascript" src="https://platform.linkedin.com/badges/js/profile.js" async defer></script>
+  <div id="div-linkedin" class="row justify-content-center">
+    <div class="col-md-8">
+      <div class="card">
+        <div class="card-body">
+          <h5 class="card-title">Developed by:</h5>
+          <div class="d-flex justify-content-center">
+            <div class="LI-profile-badge" data-version="v1" data-size="large" data-locale="en_US" data-type="horizontal"
+              data-theme="light" data-vanity="kabir00152"><a class="LI-simple-link"
+                href='https://bd.linkedin.com/in/kabir00152?trk=profile-badge'>Md. Shahriar Kabir Bhuiyan</a></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div> <br>
+  <footer class="new_footer_area">
+    <div class="new_footer_top">
+      <div class="container">
+        <div class="row">
+          <div class="col-md-8">
+            <blockquote class="blockquote text-center">
+              <p class="mb-0">To engineers who, rather than blindly following the codes of practice, seek to apply the
+                laws of nature.</p>
+              <footer class="blockquote-footer"><cite title="Source Title">T.Y. Lin</cite> </footer>
+            </blockquote>
+          </div>
+        </div>
+      </div>
+      <div class="footer_bg">
+        <div class="footer_bg_one"></div>
+        <div class="footer_bg_two"></div>
+      </div>
+    </div>
+    <div class="footer_bottom">
+      <div class="container">
+        <div class="row align-items-center">
+          <div class="col-lg-6 col-sm-7">
+            <p>All rights reserved.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </footer>
+  <div class="modal" id="myModal1">
+    <div class="modal-dialog modal-dialog-scrollable modal-xl">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title text-center"> Occupancy Category of Buildings and other Structures for Flood, Surge,
+            Wind and Earthquake Loads</h5> <button type="button" class="close" data-dismiss="modal"> &times; </button>
+        </div>
+        <div class="modal-body">
+          <table class="table table-sm table-dark table-bordered table-striped table-responsive">
+            <thead>
+              <tr>
+                <th class="align-top">Nature of Occupancy</th>
+                <th class="align-top">Occupancy Category</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td> Buildings and other structures that represent a low hazard to human life in the event of failure,
+                  including, but not limited to:<ul>
+                    <li>Agricultural facilities</li>
+                    <li>Certain temporary facilities</li>
+                    <li>Minor storage facilities</li>
+                  </ul>
+                </td>
+                <td>I</td>
+              </tr>
+              <tr>
+                <td> All buildings and other structures except those listed in Occupancy Categories I, III and IV</td>
+                <td>II</td>
+              </tr>
+              <tr>
+                <td> Buildings and other structures that represent a substantial hazard to human life in the event of
+                  failure, including, but not limited to:<ul>
+                    <li> Buildings and other structures where more than 300 people congregate in one area</li>
+                    <li> Buildings and other structures with day care facilities with a capacity greater than 150</li>
+                    <li> Buildings and other structures with elementary school or secondary school facilities with a
+                      capacity greater than 250</li>
+                    <li> Buildings and other structures with a capacity greater than 500 for colleges or adult education
+                      facilities</li>
+                    <li> Healthcare facilities with a capacity of 50 or more resident patients, but not having surgery
+                      or emergency Treatment facilities</li>
+                    <li>Jails and detention facilities</li>
+                  </ul> Buildings and other structures, not included in Occupancy Category IV, with potential to cause a
+                  substantial economic impact and/or mass disruption of day-to-day civilian life in the event of
+                  failure, including, but not limited to:<ul>
+                    <li>Power generating stations <sup>a</sup></li>
+                    <li>Water treatment facilities</li>
+                    <li>Sewage treatment facilities</li>
+                    <li>Telecommunication centers</li>
+                  </ul> Buildings and other structures not included in Occupancy Category IV (including, but not limited
+                  to, facilities that manufacture, process, handle, store, use, or dispose of such substances as
+                  hazardous fuels, hazardous chemicals, hazardous waste, or explosives) containing sufficient quantities
+                  of toxic or explosive substances to be dangerous to the public if released.</td>
+                <td>III</td>
+              </tr>
+              <tr>
+                <td> Buildings and other structures designated as essential facilities, including, but not limited to:
+                  <ul>
+                    <li> Hospitals and other healthcare facilities having surgery or emergency treatment facilities</li>
+                    <li> Fire, rescue, ambulance, and police stations and emergency vehicle garages</li>
+                    <li> Designated earthquake, hurricane, or other emergency shelters</li>
+                    <li> Designated emergency preparedness, communication, and operation centers and other facilities
+                      required for emergency response</li>
+                    <li> Power generating stations and other public utility facilities required in an emergency</li>
+                    <li> Ancillary structures (including, but not limited to, communication towers, fuel storage tanks,
+                      cooling towers</li>
+                    <li> Electrical substation structures, fire water storage tanks or other structures housing or
+                      supporting water, or other fire-suppression material or equipment) required for operation of
+                      Occupancy Category IV structures during an emergency</li>
+                    <li> Aviation control towers, air traffic control centers, and emergency aircraft hangars</li>
+                    <li> Water storage facilities and pump structures required to maintain water pressure for fire
+                      suppression</li>
+                    <li> Buildings and other structures having critical national defense functions</li>
+                  </ul> Buildings and other structures (including, but not limited to, facilities that manufacture,
+                  process, handle, store, use, or dispose of such substances as hazardous fuels, hazardous chemicals, or
+                  hazardous waste) containing highly toxic substances where the quantity of the material exceeds a
+                  threshold quantity established by the authority having jurisdiction.</td>
+                <td>IV</td>
+              </tr>
+            </tbody>
+          </table> <small> <sup>a</sup> Cogeneration power plants that do not supply power on the national grid shall be
+            designated Occupancy Category II </small>
+        </div>
+        <div class="modal-footer">
+          <footer class="blockquote-footer"> Part 6, Chapter 1, Table 6.1.1 </footer> <button type="button"
+            class="btn btn-dark" data-dismiss="modal"> Close </button>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="modal" id="myModal2">
+    <div class="modal-dialog modal-dialog-scrollable modal-xl">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title text-center"> Site Classification Based on Soil Properties</h5> <button type="button"
+            class="close" data-dismiss="modal"> &times; </button>
+        </div>
+        <div class="modal-body">
+          <table class="table table-sm table-dark table-bordered table-striped table-responsive">
+            <thead>
+              <tr>
+                <th rowspan="2" class="align-top">Site Class</th>
+                <th rowspan="2" class="align-top"> Description of soil profile up to 30 meters depth</th>
+                <th colspan="3" class="align-top">Average Soil Properties in to 30 meters</th>
+              </tr>
+              <tr>
+                <th class="align-top">Shear wave velocity,Vs(m/s)</th>
+                <th class="align-top">SPT Value,N (blows/30cm)</th>
+                <th class="align-top">Undrained shear strength, su (kPa)</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>SA</td>
+                <td> Rock or other rock-like geological formation, including at most 5 m of weaker material at the
+                  surface.</td>
+                <td>> 800</td>
+                <td>---</td>
+                <td>---</td>
+              </tr>
+              <tr>
+                <td>SB</td>
+                <td> Deposits of very dense sand, gravel, or very stiff clay, at least several tens of metres in
+                  thickness, characterised by a gradual increase of mechanical properties with depth.</td>
+                <td>360 – 800</td>
+                <td>> 50</td>
+                <td>> 250</td>
+              </tr>
+              <tr>
+                <td>SC</td>
+                <td> Deep deposits of dense or medium dense sand, gravel or stiff clay with thickness from several tens
+                  to many hundreds of metres.</td>
+                <td>180 – 360</td>
+                <td>15-50</td>
+                <td>70-270</td>
+              </tr>
+              <tr>
+                <td>SD</td>
+                <td> Deposits of loose-to-medium cohesionless soil (with or without some soft cohesive layers), or of
+                  predominantly soft-to-firm cohesive soil.</td>
+                <td>&lt 180</td>
+                <td>&lt 15</td>
+                <td>&lt 70</td>
+              </tr>
+              <tr>
+                <td>SE</td>
+                <td> A soil profile consisting of a surface alluvium layer with Vs values of type SC or SD and thickness
+                  varying between about 5 m and 20 m, underlain by stiffer material with Vs > 800 m/s.</td>
+                <td>---</td>
+                <td>---</td>
+                <td>---</td>
+              </tr>
+              <tr>
+                <td>S1</td>
+                <td> Deposits consisting, or containing a layer at least 10 m thick, of soft clays/silts with a high
+                  plasticity index (PI > 40) and high water content</td>
+                <td>&lt 100 (indicative)</td>
+                <td>---</td>
+                <td>10-20</td>
+              </tr>
+              <tr>
+                <td>S2</td>
+                <td> Deposits of liquefiable soils, of sensitive clays, or any other soil profile not included in types
+                  SA to SE or S1</td>
+                <td>---</td>
+                <td>---</td>
+                <td>---</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <div class="modal-footer">
+          <footer class="blockquote-footer"> Part 6, Chapter 2, Table 6.2.13 </footer> <button type="button"
+            class="btn btn-dark" data-dismiss="modal"> Close </button>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="modal" id="myModal3" data-backdrop="static">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h4 class="modal-title text-center"> Fundamental Period of Building Structure by Approximate Method</h4>
+          <button type="button" class="close" data-dismiss="modal"> &times; </button>
+        </div>
+        <div class="modal-body">
+          <form id="form12" action="">
+            <div class="form-group"> <label for="structureType">Structure type:</label> <select required
+                class="form-control" id="structureType">
+                <option value="0.0466,0.9">Concrete moment-resisting frames</option>
+                <option value="0.0724,0.8">Steel moment-resisting frames</option>
+                <option value="0.0731,0.75">Eccentrically braced steel frame</option>
+                <option value="0.0488,0.75">All other structural systems</option>
+              </select></div> <label for="structureHeight">Structure Height, <i>h<sub>n</sub></i>:</label>
+            <div class="input-group"> <input required type="number" class="form-control text-right" id="structureHeight"
+                max="300" min="1" step="any" />
+              <div class="input-group-append"> <span class="input-group-text">meter</span></div>
+            </div> <small class="text-muted">[Height of building in metres from foundation or from top of rigid
+              basement. This excludes the basement storeys, where basement walls are connected with the ground floor
+              deck or fitted between the building columns. But it includes the basement storeys, when they are not so
+              connected.]</small><br>
+            <p class="mt-3"> Numerical coefficient to determine building period:<br /> <i>C<sub>t</sub></i> = <strong
+                id="outCt"></strong><br /> <i>m</i> = <strong id="outm"></strong><br /> The building Period:</p>
+            <div class="d-inline-block b-0">$$T=C_t(h_n)^m= $$</div><strong id="outApproxT"></strong>
+        </div>
+        <div class="modal-footer">
+          <footer class="blockquote-footer"> Part 6, Chapter 2, Article 2.5.7.2 </footer> <button id="applyT"
+            type="submit" class="btn btn-primary"><i class="fa fa-check"></i> Apply & Close</button> <button
+            type="button" class="btn btn-dark" data-dismiss="modal"><i class="fa fa-times"></i> Close</button>
+        </div>
+        </form>
+      </div>
+    </div>
+  </div>
+  </div>
+  </div>
+  <script src="https://kit.fontawesome.com/925086fba6.js" crossorigin="anonymous"></script>
+  <script type="text/javascript" src="js/jquery-3.5.1.min.js"></script>
+  <script type="text/javascript" src="https://unpkg.com/@popperjs/core@2"></script>
+  <script type="text/javascript" src="js/bootstrap.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/select2/4.0.13/js/select2.min.js"
+    integrity="sha512-2ImtlRlf2VVmiGZsjm9bEyhjGW4dU7B6TNwh/hx/iSByxNENtj3WVE6o/9Lj4TJeVXPi4bnOIMXFIJJAeufa0A=="
+    crossorigin="anonymous"></script>
+  <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3.0.1/es5/tex-mml-chtml.js"></script>
+  <script src="js/apexcharts.js"></script>
+  <script src="js/handsontable.full.min.js"></script>
+  <script type="text/javascript" src="js/myList.js"></script>
+  <script type="text/javascript" src="js/myJS.js"></script>
+</body>
+
+</html>
