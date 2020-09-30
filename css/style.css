@@ -213,7 +213,7 @@ dd {}#rsPage2 small {
 	border-radius: 20px;
 	box-shadow: 3px 3px 3px 2px rgba(0, 0, 0, 0.2)
 }
-footer {
+.developer_div {
 	background-color: #4b515d;
 	border-radius: 25% 25% 0 0;
 	background-image: url("../img/Texture/purty-wood.png");
